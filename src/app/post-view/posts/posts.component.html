@@ -1,0 +1,21 @@
+<li class='card'>
+    <button id="publi" class = "btn" (click) = "onViewPost(id)">
+        <h4> {{postTitle}}  </h4>
+        <img style="max-width:400px;" *ngIf="post.photo" [src]="post.photo">
+        <p> {{ postContent }}</p>
+        
+        <div>
+            <button class="btn btn-success"
+                (click)='onLike(post)'>J'aime
+            </button>
+            <button class="btn btn-danger"
+                (click)='onDislike(post)'>Je n'aime pas
+            </button>
+        <div>Likes level: {{counterLikes}}</div>
+        <button class="btn btn-default pull-right" (click)="onDeletePost(post)">
+            Supprimer
+        </button>
+        </div>
+    </button>
+</li>
+
